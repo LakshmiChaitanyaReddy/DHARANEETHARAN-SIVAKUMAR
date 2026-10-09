@@ -1,0 +1,229 @@
+{
+  "pdf": {
+    "pages": "auto",
+    "paper": "a4",
+    "exclude": [],
+    "template": "modern",
+    "includeVisual": false
+  },
+  "theme": {
+    "mode": "light",
+    "vars": {
+      "dark": {},
+      "light": {},
+      "common": {}
+    },
+    "fonts": {},
+    "preset": "warm-professional",
+    "customThemes": [],
+    "iconAnimation": "lift"
+  },
+  "skills": [
+    {
+      "icon": "",
+      "items": [
+        "ITSM",
+        "HRSD"
+      ],
+      "category": "ServiceNow Modules"
+    },
+    {
+      "icon": "",
+      "items": [
+        "Business Rules",
+        "Client Scripts",
+        "UI Actions",
+        "Workflows",
+        "Flow Designer",
+        "Scripting",
+        "JavaScript",
+        "Glide APIs"
+      ],
+      "category": "ServiceNow Development"
+    },
+    {
+      "icon": "",
+      "items": [
+        "User Management",
+        "ACLs",
+        "Forms",
+        "Lists",
+        "Catalogs"
+      ],
+      "category": "Administration"
+    },
+    {
+      "icon": "",
+      "items": [
+        "Performance Analytics",
+        "Reports",
+        "Dashboards"
+      ],
+      "category": "Reporting & Analytics"
+    },
+    {
+      "icon": "",
+      "items": [
+        "REST/SOAP (basic)",
+        "MID Server concepts"
+      ],
+      "category": "Integrations"
+    },
+    {
+      "icon": "",
+      "items": [
+        "Agile / Scrum",
+        "Business Analysis &",
+        "Requirement Gathering"
+      ],
+      "category": "Skills"
+    }
+  ],
+  "profile": {
+    "name": "DHARANEETHARAN SIVAKUMAR",
+    "about": [
+      "ServiceNow Consultant with 4 years of experience in ServiceNow Development, Administration, and Implementation across ITSM and HRSD modules. Certified CSA, CAD, CIS-ITSM, and CIS-HR professional with hands-on expertise in scripting, workflow automation, integrations, and performance analytics. Proven ability to gather requirements, design scalable solutions, automate business processes, and support enterprise clients across US and European regions."
+    ],
+    "email": "s.dharaneetharan22@gmail.com",
+    "links": [
+      {
+        "url": "https://www.linkedin.com/in/dharaneetharan-s-805ba718a/",
+        "icon": "linkedin",
+        "label": "LinkedIn"
+      }
+    ],
+    "phone": "+91 8144314422",
+    "photo": {
+      "alt": "",
+      "src": ""
+    },
+    "title": "ServiceNow Developer",
+    "status": "Open to new roles",
+    "ogImage": {
+      "alt": "",
+      "src": ""
+    },
+    "siteUrl": "",
+    "tagline": "ServiceNow Consultant with 4 years of experience in ServiceNow Development, Administration, and Implementation across ITSM and HRSD modules.",
+    "location": "",
+    "brandIcon": "",
+    "resumeUrl": "",
+    "shortName": "DHARANEETHARAN",
+    "resumeMode": "",
+    "resumeName": "",
+    "yearsRounding": "",
+    "experienceYears": ""
+  },
+  "projects": [],
+  "sections": [],
+  "template": {
+    "look": "freelancer-services",
+    "pack": "marketing-sales",
+    "skeleton": "freelancer-services"
+  },
+  "education": [
+    {
+      "degree": "Bachelor of Engineering (Mechanical Engineering)",
+      "detail": "Graduated with Distinction (GPA 9.2)",
+      "endYear": "2022",
+      "startYear": "2018",
+      "institution": "Sri Krishna college of Engineering and Technology"
+    }
+  ],
+  "experience": [
+    {
+      "id": "exp-1",
+      "role": "Specialist",
+      "tech": [
+        "ITSM",
+        "HRSD",
+        "Business Rules",
+        "Client Scripts",
+        "UI Actions"
+      ],
+      "company": "HCL Tech",
+      "endDate": null,
+      "summary": "",
+      "location": "Bangalore, India",
+      "startDate": "2025-02",
+      "highlights": [
+        "Worked as a Techno-Functional ServiceNow Consultant across ITSM and HRSD modules.",
+        "Designed and implemented automation for server creation, reducing manual effort and turnaround time.",
+        "Configured and customized Incident, Change, Request, and HR Case Management processes.",
+        "Developed ServiceNow scripts (Business Rules, Client Scripts, UI Actions) to enhance platform functionality.",
+        "Acted as sole ServiceNow resource for automation analysis and delivery, coordinating directly with stakeholders.",
+        "Provided L2/L3 support, troubleshooting complex ServiceNow issues and ensuring SLA compliance."
+      ]
+    },
+    {
+      "id": "exp-2",
+      "role": "Analyst",
+      "tech": [
+        "ITSM",
+        "Workflows"
+      ],
+      "company": "Accenture",
+      "endDate": "2025-02",
+      "summary": "",
+      "location": "Bangalore, India",
+      "startDate": "2022-06",
+      "highlights": [
+        "Part of Cloud Technology Infrastructure Engineering team supporting ServiceNow ITSM.",
+        "Delivered ServiceNow development, system administration, and technical support.",
+        "Implemented workflows and automation aligned with ITIL best practices.",
+        "Received client appreciation for consistent quality delivery and meeting deadlines."
+      ]
+    }
+  ],
+  "sectionOrder": [
+    "skills",
+    "projects",
+    "about",
+    "experience",
+    "certifications",
+    "education"
+  ],
+  "sectionLabels": {
+    "about": "About",
+    "skills": "Services",
+    "projects": "Case studies",
+    "education": "Education",
+    "experience": "Background",
+    "certifications": "Credentials"
+  },
+  "certifications": [
+    {
+      "abbr": "",
+      "icon": "",
+      "name": "ServiceNow Certified System Administrator (CSA)",
+      "year": "",
+      "issuer": "",
+      "credentialUrl": ""
+    },
+    {
+      "abbr": "",
+      "icon": "",
+      "name": "ServiceNow Certified Application Developer (CAD)",
+      "year": "",
+      "issuer": "",
+      "credentialUrl": ""
+    },
+    {
+      "abbr": "",
+      "icon": "",
+      "name": "ServiceNow Certified Implementation Specialist (CIS-HR)",
+      "year": "",
+      "issuer": "",
+      "credentialUrl": ""
+    },
+    {
+      "abbr": "",
+      "icon": "",
+      "name": "ServiceNow Certified Implementation Specialist (CIS-ITSM)",
+      "year": "",
+      "issuer": "",
+      "credentialUrl": ""
+    }
+  ],
+  "hiddenSections": []
+}
