@@ -3,7 +3,7 @@
     "pages": "auto",
     "paper": "a4",
     "exclude": [],
-    "template": "modern",
+    "template": "ats",
     "includeVisual": false
   },
   "theme": {
@@ -14,7 +14,7 @@
       "common": {}
     },
     "fonts": {},
-    "preset": "warm-professional",
+    "preset": "minimal-light",
     "customThemes": [],
     "iconAnimation": "lift"
   },
@@ -117,9 +117,9 @@
   "projects": [],
   "sections": [],
   "template": {
-    "look": "freelancer-services",
-    "pack": "marketing-sales",
-    "skeleton": "freelancer-services"
+    "look": "clean-recruiter",
+    "pack": "software-it",
+    "skeleton": "clean-recruiter"
   },
   "education": [
     {
@@ -176,20 +176,20 @@
     }
   ],
   "sectionOrder": [
-    "skills",
-    "projects",
     "about",
     "experience",
-    "certifications",
-    "education"
+    "skills",
+    "projects",
+    "education",
+    "certifications"
   ],
   "sectionLabels": {
-    "about": "About",
-    "skills": "Services",
-    "projects": "Case studies",
+    "about": "Summary",
+    "skills": "Skills",
+    "projects": "Projects",
     "education": "Education",
-    "experience": "Background",
-    "certifications": "Credentials"
+    "experience": "Experience",
+    "certifications": "Certifications"
   },
   "certifications": [
     {
