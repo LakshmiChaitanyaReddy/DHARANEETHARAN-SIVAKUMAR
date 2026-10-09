@@ -229,7 +229,10 @@
      ------------------------------------------------------------------ */
   function draw(data) {
     DATA = R.normalise(data);
-    themeMode = (DATA.theme && DATA.theme.mode) === "light" ? "light" : "dark";
+    /* A published portfolio always opens dark on a fresh page load. Preview
+       frames still honour the mode selected by the editor via postMessage,
+       and the public header toggle can switch the open tab to light. */
+    themeMode = PREVIEW && (DATA.theme && DATA.theme.mode) === "light" ? "light" : "dark";
     applyTheme();
 
     const pdf = DATA.pdf || {};
