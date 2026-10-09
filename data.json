@@ -1,26 +1,23 @@
 {
   "pdf": {
-    "pages": "auto",
-    "paper": "a4",
-    "exclude": [],
     "template": "ats",
-    "includeVisual": false
+    "paper": "a4",
+    "exclude": []
   },
   "theme": {
-    "mode": "light",
-    "vars": {
-      "dark": {},
-      "light": {},
-      "common": {}
-    },
-    "fonts": {},
     "preset": "minimal-light",
-    "customThemes": [],
-    "iconAnimation": "lift"
+    "mode": "light",
+    "iconAnimation": "lift",
+    "fonts": {},
+    "vars": {
+      "common": {},
+      "dark": {},
+      "light": {}
+    },
+    "templates": []
   },
   "skills": [
     {
-      "icon": "",
       "items": [
         "ITSM",
         "HRSD"
@@ -28,7 +25,6 @@
       "category": "ServiceNow Modules"
     },
     {
-      "icon": "",
       "items": [
         "Business Rules",
         "Client Scripts",
@@ -42,7 +38,6 @@
       "category": "ServiceNow Development"
     },
     {
-      "icon": "",
       "items": [
         "User Management",
         "ACLs",
@@ -53,7 +48,6 @@
       "category": "Administration"
     },
     {
-      "icon": "",
       "items": [
         "Performance Analytics",
         "Reports",
@@ -62,7 +56,6 @@
       "category": "Reporting & Analytics"
     },
     {
-      "icon": "",
       "items": [
         "REST/SOAP (basic)",
         "MID Server concepts"
@@ -70,7 +63,6 @@
       "category": "Integrations"
     },
     {
-      "icon": "",
       "items": [
         "Agile / Scrum",
         "Business Analysis &",
@@ -107,12 +99,15 @@
     "tagline": "ServiceNow Consultant with 4 years of experience in ServiceNow Development, Administration, and Implementation across ITSM and HRSD modules.",
     "location": "",
     "brandIcon": "",
-    "resumeUrl": "",
+    "resumeUrl": "assets/dharaneetharan-2026.pdf",
     "shortName": "DHARANEETHARAN",
     "resumeMode": "",
     "resumeName": "",
     "yearsRounding": "",
-    "experienceYears": ""
+    "experienceYears": "",
+    "resumeDownload": {
+      "mode": "file"
+    }
   },
   "projects": [],
   "sections": [],
@@ -194,7 +189,6 @@
   "certifications": [
     {
       "abbr": "",
-      "icon": "",
       "name": "ServiceNow Certified System Administrator (CSA)",
       "year": "",
       "issuer": "",
@@ -202,7 +196,6 @@
     },
     {
       "abbr": "",
-      "icon": "",
       "name": "ServiceNow Certified Application Developer (CAD)",
       "year": "",
       "issuer": "",
@@ -210,7 +203,6 @@
     },
     {
       "abbr": "",
-      "icon": "",
       "name": "ServiceNow Certified Implementation Specialist (CIS-HR)",
       "year": "",
       "issuer": "",
@@ -218,7 +210,6 @@
     },
     {
       "abbr": "",
-      "icon": "",
       "name": "ServiceNow Certified Implementation Specialist (CIS-ITSM)",
       "year": "",
       "issuer": "",
