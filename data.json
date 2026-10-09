@@ -1,26 +1,23 @@
 {
   "pdf": {
-    "pages": "auto",
-    "paper": "a4",
-    "exclude": [],
     "template": "ats",
-    "includeVisual": false
+    "paper": "a4",
+    "exclude": []
   },
   "theme": {
+    "preset": "minimal-light",
     "mode": "light",
-    "vars": {
-      "dark": {},
-      "light": {},
-      "common": {}
-    },
+    "iconAnimation": "lift",
     "fonts": {},
-    "preset": "editorial-bw",
-    "customThemes": [],
-    "iconAnimation": "lift"
+    "vars": {
+      "common": {},
+      "dark": {},
+      "light": {}
+    },
+    "templates": []
   },
   "skills": [
     {
-      "icon": "",
       "items": [
         "ITSM",
         "HRSD"
@@ -28,7 +25,6 @@
       "category": "ServiceNow Modules"
     },
     {
-      "icon": "",
       "items": [
         "Business Rules",
         "Client Scripts",
@@ -42,7 +38,6 @@
       "category": "ServiceNow Development"
     },
     {
-      "icon": "",
       "items": [
         "User Management",
         "ACLs",
@@ -53,7 +48,6 @@
       "category": "Administration"
     },
     {
-      "icon": "",
       "items": [
         "Performance Analytics",
         "Reports",
@@ -62,7 +56,6 @@
       "category": "Reporting & Analytics"
     },
     {
-      "icon": "",
       "items": [
         "REST/SOAP (basic)",
         "MID Server concepts"
@@ -70,7 +63,6 @@
       "category": "Integrations"
     },
     {
-      "icon": "",
       "items": [
         "Agile / Scrum",
         "Business Analysis &",
@@ -142,10 +134,10 @@
         "UI Actions"
       ],
       "company": "HCL Tech",
-      "endDate": null,
+      "endDate": "2030-04",
       "summary": "",
       "location": "Bangalore, India",
-      "startDate": "2025-02",
+      "startDate": "2027-02",
       "highlights": [
         "Worked as a Techno-Functional ServiceNow Consultant across ITSM and HRSD modules.",
         "Designed and implemented automation for server creation, reducing manual effort and turnaround time.",
@@ -194,7 +186,6 @@
   "certifications": [
     {
       "abbr": "",
-      "icon": "",
       "name": "ServiceNow Certified System Administrator (CSA)",
       "year": "",
       "issuer": "",
@@ -202,7 +193,6 @@
     },
     {
       "abbr": "",
-      "icon": "",
       "name": "ServiceNow Certified Application Developer (CAD)",
       "year": "",
       "issuer": "",
@@ -210,7 +200,6 @@
     },
     {
       "abbr": "",
-      "icon": "",
       "name": "ServiceNow Certified Implementation Specialist (CIS-HR)",
       "year": "",
       "issuer": "",
@@ -218,7 +207,6 @@
     },
     {
       "abbr": "",
-      "icon": "",
       "name": "ServiceNow Certified Implementation Specialist (CIS-ITSM)",
       "year": "",
       "issuer": "",
