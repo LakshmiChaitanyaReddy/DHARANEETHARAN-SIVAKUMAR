@@ -1196,7 +1196,13 @@
       const now = new Date();
       const e = has(j.endDate) ? F.parseYM(j.endDate) : { y: now.getFullYear(), m: now.getMonth() + 1 };
       if (!e) return null;
-      return { job: j, s: F.ymIndex(s), e: F.ymIndex(e) + 1 };
+      const startIndex = F.ymIndex(s);
+      /* A future open-ended role must still extend the axis to its own
+         start. Using today unconditionally made its end precede its start,
+         produced a negative-width bar and let older roles truncate the
+         displayed range. One month is the smallest truthful visible span. */
+      const endIndex = Math.max(startIndex + 1, F.ymIndex(e) + 1);
+      return { job: j, s: startIndex, e: endIndex };
     }).filter(Boolean);
     if (!jobs.length) return null;
     const minY = Math.floor(Math.min.apply(null, jobs.map(function (j) { return j.s; })) / 12);
