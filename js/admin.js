@@ -140,7 +140,8 @@
         { key: "location", label: "Location", hint: "City, Country" },
         { key: "email", label: "Email", check: "email" },
         { key: "phone", label: "Phone" },
-        { key: "resumeUrl", label: "Resume URL", hint: "The hosted PDF the site links to" },
+        { key: "resumeUrl", label: "Resume PDF", type: "pdf",
+          hint: "Upload a PDF here. After you save data.json, the public Download Resume button will use this file." },
         { key: "siteUrl", label: "Site URL", hint: "Canonical + Open Graph" },
         { key: "ogImage", label: "Share image", type: "image",
           upload: { maxDim: 1200, mime: "image/jpeg" },
@@ -392,6 +393,27 @@
     });
   }
 
+  function uploadPdf(file, status) {
+    if (!TOKEN) return Promise.reject(new Error("Connect to the repository first."));
+    if (!file || (file.type !== "application/pdf" && !/\.pdf$/i.test(file.name || ""))) {
+      return Promise.reject(new Error("Choose a PDF file."));
+    }
+    if (file.size > 10 * 1024 * 1024) return Promise.reject(new Error("The PDF is larger than 10 MB. Export a smaller copy and try again."));
+    const path = ASSET_DIR + "/" + safeName(file.name || "resume.pdf", "pdf");
+    status("Uploading " + path + " (" + Math.max(1, Math.round(file.size / 1024)) + " KB)…", "");
+    return file.arrayBuffer()
+      .then(function (buf) { return PF.b64.bytes(new Uint8Array(buf)); })
+      .then(function (b64) {
+        return shaOf(path).then(function (existing) {
+          return putFile(path, (existing ? "Replace " : "Upload ") + path, b64, existing);
+        });
+      })
+      .then(function (res) {
+        if (!res.ok) throw new Error(describeHttpError(res.status, res.json));
+        return path;
+      });
+  }
+
   /* ====================================================================
      FIELD CONTROLS
      ==================================================================== */
@@ -516,6 +538,42 @@
         + " and re-encoded to " + (FORMAT_OF[up.mime] || "WebP")
         + ", then committed to " + ASSET_DIR + "/ as their own commit." }),
       has(f.hint) && el("span", { class: "hint", text: f.hint }));
+  }
+
+  function pdfField(obj, f) {
+    const id = uid();
+    const input = el("input", { type: "file", accept: "application/pdf,.pdf", class: "visually-hidden", id: id });
+    const pathLine = el("p", { class: "img-path" });
+    const status = el("p", { class: "img-status", role: "status", "aria-live": "polite" });
+    function say(msg, kind) { status.textContent = msg || ""; status.className = "img-status" + (kind ? " " + kind : ""); }
+    function draw() { pathLine.textContent = has(obj[f.key]) ? obj[f.key] : "No resume PDF uploaded"; }
+    input.addEventListener("change", function () {
+      const file = input.files && input.files[0];
+      if (!file) return;
+      uploadPdf(file, say).then(function (filePath) {
+        obj[f.key] = filePath;
+        obj.resumeDownload = { mode: "file" };
+        touched(); draw();
+        say("Uploaded and committed. Press Save to GitHub to connect this PDF to the public site.", "ok");
+      }).catch(function (err) { say(String(err.message || err), "err"); })
+        .then(function () { input.value = ""; });
+    });
+    draw();
+    return el("div", { class: "field" },
+      el("label", { for: id, text: f.label || f.key }),
+      el("div", { class: "img-field" },
+        el("div", { class: "img-row" },
+          el("span", { class: "img-thumb", "aria-hidden": "true", text: "PDF" }),
+          el("div", { class: "img-side" }, pathLine,
+            el("div", { class: "img-buttons" },
+              el("label", { class: "btn btn-ghost btn-sm", for: id }, has(obj[f.key]) ? "Replace PDF…" : "Upload PDF…"), input,
+              has(obj[f.key]) ? el("a", { class: "btn btn-ghost btn-sm", href: obj[f.key], target: "_blank", rel: "noopener noreferrer", text: "Open current ↗" }) : null,
+              el("button", { class: "btn btn-ghost btn-sm", type: "button", onclick: function () {
+                obj[f.key] = ""; obj.resumeDownload = { mode: "off" }; touched(); draw();
+                say("Resume button will be removed after you save. The old PDF stays in repository history.", "");
+              } }, "Remove")))),
+        status),
+      el("span", { class: "hint", text: f.hint || "PDF only, up to 10 MB." }));
   }
 
   /* ── Logo / icon picker: brand mark, Lucide name, URL, upload,
@@ -698,6 +756,7 @@
   function fieldRow(obj, f, onTitleChange) {
     if (f.type === "tags") return tagInput(obj, f);
     if (f.type === "image") return imageField(obj, f);
+    if (f.type === "pdf") return pdfField(obj, f);
     if (f.type === "icon") return iconField(obj, f);
     if (f.type === "select") return selectField(obj, f);
 
